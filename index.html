@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="flex">
+        <div class="pageWidth flex">
+            <h1>DojoWeather</h1>
+            <ul onclick="alert('Loading weather report...')" class="flex">
+                <li>Burbank</li>
+                <li>Chicago</li>
+                <li>Dallas</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="pageWidth">
+        <div class="flex">
+            <h2>San Jose</h2>
+            <p>Show temperature in 
+                <select name="changeTemp" onchange="convert(this)">
+                    <option>°F</option>
+                    <option>°C</option>
+                </select>
+            </p>
+        </div>
+        <hr>
+        <div class="flex">
+            <div class="weatherBox">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" alt="Clouds with Rain" class="weatherIcons">
+                <p>Some rain</p>
+                <div class="temps flex">
+                    <p><span class="high" id="temp1">75</span></p>
+                    <p><span class="low" id="temp2">65</span></p>
+                </div>
+            </div>
+            <div class="weatherBox">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="Sun icon" class="weatherIcons">
+                <p>Some sun</p>
+                <div class="temps flex">
+                    <p><span class="high" id="temp3">80</span></p>
+                    <p><span class="low" id="temp4">66</span></p>
+                </div>
+            </div>
+            <div class="weatherBox">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" alt="Clouds Icon" class="weatherIcons">
+                <p>Some clouds</p>
+                <div class="temps flex">
+                    <p><span class="high" id="temp5">69</span></p>
+                    <p><span class="low" id="temp6">61</span></p>
+                </div>
+            </div>
+            <div class="weatherBox">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" alt="Sun Icon" class="weatherIcons">
+                <p>Some sun</p>
+                <div class="temps flex">
+                    <p><span class="high" id="temp7">78</span></p>
+                    <p><span class="low" id="temp8">70</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cookieBox" class="pageWidth flex">
+        <img src="assets/cookie.png" alt="Cookie icon" id="cookieIcon">
+        <div>
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</p>
+        </div>
+        <button class="accept" onclick="hide()">I Accept</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
